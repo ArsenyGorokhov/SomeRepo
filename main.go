@@ -94,7 +94,7 @@ func main() {
 	fmt.Scan(&expression)
 	expression = strings.ToUpper(expression)
 	for i, vmc := range validMathChars {
-		if strings.Count(expression, vmc) == 1 {
+		if strings.Contains(expression, vmc) {
 			expressionSlice = strings.Split(expression, vmc)
 			//Валидация латинских цифр
 			if isValidRoman(expressionSlice[0]) && isValidRoman(expressionSlice[1]) {
